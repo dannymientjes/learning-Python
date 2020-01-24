@@ -1,0 +1,55 @@
+# show comprehensions eval
+
+xx=''' 
+   
+[i*i for i in range(10)]
+[i+i for i in range(10) if i not in [3,4,5]]
+[i for i in g if i.isalpha()]
+print("".join([i for i in g if i.isalpha()]))
+print("".join([i for i in g if i not in f]))
+[i * i for i in range(5) if i % 2 == 0]
+[x for x in range(50) if x %2==0 if x%5==0]
+[[x*y for y in range(1,11)] for x in range(4,7)]
+{i: i*i for i in range(10)}
+{i+1: i*i for i in range(10)}
+{i+1: i*i for i in range(10) if i>5}
+{i: i*i for i in d if i%2 == 0}
+{i: i*i for i in range(10) if i!=7}
+{i: i*i for i in d}
+{k:v*2 for (k,v) in e.items()}
+{k:v*2 for (k,v) in e.items() if k not in f}
+{(m, n) for m in range(3) for n in range(5, 8)}
+{"test"}
+[(f"{'||':>22}")for i in range(3)]
+[print(f"{'||':>22}")for i in range(3)]
+[(lambda x: x*x)(x) for x in range(10)]
+
+
+sum(i*i for i in range(10))
+
+
+
+
+'''
+
+                                # Mind: xx is a string and y is a list
+
+yy=(xx.splitlines())            # splitlines xx into a list called yy
+d=[3,4,5,6,7,8,9,10,11]         # this is just a list used in some of the comprehensions
+e= {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+f="cde"
+g="The man can dive!"
+
+def show_comprehensions(x):
+    print()
+    print("----------------------------")
+    print(x)
+    print(eval(x))
+    print("----------------------------")
+
+for i in yy:                    # iterate through the list called yy
+    if i=="" or i.isspace():    # ignor the empty space after xx='''
+        continue                # go back to the beginning of the loop
+    else:
+        show_comprehensions(i)  # execute the def(ined) function
+
