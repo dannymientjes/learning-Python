@@ -1,0 +1,56 @@
+#string_methods
+
+x=''' 
+    
+"home home HOME".capitalize()
+"home Home HOME".casefold()
+"Home home Home".lower()
+"Home home Home".upper()
+"home Home HOME".swapcase()
+"Home".center(30,"@")
+"Home".ljust(15,"@")
+"Home".rjust(15,"@")
+"Home home home home".expandtabs(15)
+"Home home home home".count("me")
+"Home home home home".rfind("me")
+"Home home home home".rindex("me")
+"Home home home home".find("me")
+"Home home home home".endswith("me")
+"Home home home home".startswith("H")
+"@".join("home home home Home")
+"Home in spam tree five".partition("in")
+"Home in spam tree five".rpartition("in")
+"Home home home home".replace("me","pe",3)
+"Home in spam in tree five".split("in")
+"Home in spam in tree five".split("in",1)
+"Home in spam in tree five".rsplit("in",1)
+"#  .home#homeandmore,.  #  ".strip(".,#?!: ")
+"#  .home#homeandmore,.  #  ".lstrip(".,#?!: ")
+"#  .home#homeandmore,.  #  ".rstrip(".,#?!: ")
+"Home home Home".endswith("me")
+"Home home Home".isupper()
+"Home home Home".isprintable()
+"Home home Home".isalpha()
+"HomehomeHome".isalpha()
+"Home home Home".isspace()
+" ".isspace()
+
+'''
+
+                                # Mind: x is a string and y is a list
+
+y=(x.splitlines())              # splitlines x into a list called y
+
+def show_string_methods(x):
+    print()
+    print("----------------------------")
+    print(x)
+    print(eval(x))
+    print("----------------------------")
+
+for i in y:                     # iterate through the list called y
+    if i=="" or i.isspace():    # ignor the empty space after x='''
+        continue                # go back to the beginning of the loop
+    else:
+        show_string_methods(i)  # execute the def(ined) function
+
