@@ -1,0 +1,53 @@
+# show comprehensions with exec, just a tryout of comprehensions
+
+xx='''
+
+print([i*i for i in range(10)])
+print([i+i for i in range(10) if i not in [3,4,5]])
+print([i for i in g if i.isalpha()])
+print("".join([i for i in g if i.isalpha()]))
+print("".join([i for i in g if i not in f]))
+print([i * i for i in range(5) if i % 2 == 0])
+print([x for x in range(50) if x %2==0 if x%5==0])
+print([[x*y for y in range(1,11)] for x in range(4,7)])
+print({i: i*i for i in range(10)})
+print({i+1: i*i for i in range(10)})
+print({i+1: i*i for i in range(10) if i>5})
+print({i: i*i for i in d if i%2 == 0})
+print({i: i*i for i in range(10) if i!=7})
+print({i: i*i for i in d})
+print({k:v*2 for (k,v) in e.items()})
+print({k:v*2 for (k,v) in e.items() if k not in f})
+print({(m, n) for m in range(3) for n in range(5, 8)})
+print({"test"})
+print([(f"{'||':>22}")for i in range(3)])
+print([print(f"{'||':>22}")for i in range(3)])
+print([(lambda x: x*x)(x) for x in range(10)])
+
+'''
+
+
+
+yy=(xx.splitlines())                        # splitlines from string xx into a list called yy
+                                            # So, xx is a string and yy is a list
+                                            
+                                            # defining the variables uses in the comprehensions 
+g="The man is diving in cold water!"
+e = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+d=[4,7,6,1,4,9,7]
+f="cd"
+g="The man is diving in cold water!"
+
+def show_comprehensions(x):
+    print()
+    print("----------------------------")
+    print(x)
+    exec(x)
+    print("----------------------------")
+
+for i in yy:                            # iterate through the list called yy
+    if i=="" or i.isspace():            # ignor the empty space after xx='''
+        continue                        # go back to the beginning of the loop
+    else:
+        show_comprehensions(i)          # execute this def(ined) function
+
