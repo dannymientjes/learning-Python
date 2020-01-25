@@ -1,0 +1,55 @@
+#Python loops
+
+print("\n\n---------------------------------\n\n")
+
+for i in [3,4,5,6,7,8]:             # do not forget the colon
+    print(i)                        # the variable i is itering over the list
+                                    # you don't have to define i, because it's for the itering
+    
+print("\n\n---------------------------------\n\n")
+
+x=[10,20,30,40,1,"a"]
+for i in x:                         # the variable i is itering over the list
+    print(i)                        # remember the indentation, four spaces or one tab
+
+print("\n\n---------------------------------\n\n")
+    
+x="hello"
+for i in x:
+    print(i,i)
+
+
+print("\n\n---------------------------------\n\n")
+
+x=[1,2,3]
+y=["a","b","c"]
+for i in x:
+    for z in y:                     # a loop in a loop
+        print(i,z)
+        
+print("\n\n---------------------------------\n\n")      
+
+x1=[1,2,3]
+x2=["a","b","c"]
+x3=[True,True,False]
+for i in x1:
+    for j in x2:
+        for k in x3:                # a loop in a loop in a loop
+            print(i,j,k)
+
+print("\n\n---------------------------------\n\n")
+
+for i in range(4):
+    print(i+1000)
+    
+print("\n\n---------------------------------\n\n")
+
+for i in range(4,8):
+    print(i+10)           
+            
+print("\n\n---------------------------------\n\n")
+
+x1=0        
+while x1<12:                        # a "while loop"
+    print(x1)
+    x1=x1+1
