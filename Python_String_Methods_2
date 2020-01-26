@@ -1,0 +1,417 @@
+####String Methods
+
+def print_fun():
+    yy=(xx.splitlines())                    # splits up the string xx into a list
+    print()
+    print(yy[1]+"()")                       # prints the function name (2nd item of the list)
+    print()
+    print(" "*4+"Description: ",yy[2])      # prints 4 spaces, then the discription (3th item of the list)
+    print(" "*4+"Syntax: ",yy[3])           # prints 4 spaces, the the syntax (4th item of the list)
+    y=(yy[4:])                              # make new list, without first 3 items
+    print()                                 # print empty line
+    for i in y:                             # iter over the new list
+        print(" "*4+"Example:",repr(i))     # prints i the item from the list y, using repr() to print raw
+        print(" "*4+"Output : ",(eval(i)))  # evals the item i , and prints it 
+        print()                             # print empty line
+xx='''
+capitalize
+Converts the first character to upper case
+string.capitalize()
+"hello, and welcome to my world.".capitalize()
+"36 is my age.".capitalize()
+'''
+print_fun()
+
+xx='''
+casefold
+Converts string into lower case
+string.casefold()
+"Hello, And Welcome To My World!".casefold()
+'''
+print_fun()
+
+xx='''
+center
+Returns a centered string
+string.center(length, character)
+"banana".center(20)
+"banana".center(20, "-")
+'''
+print_fun()
+	
+xx='''
+count
+Returns the number of times a specified value occurs in a string
+string.count(value, start, end)
+"I love apples, apple are my favorite fruit".count("apple")
+"I love apples, apple are my favorite fruit".count("apple", 10, 24)
+'''
+print_fun()
+
+xx='''
+encode
+Returns an encoded version of the string
+string.encode(encoding=encoding, errors=errors)
+"My name is Ståle".encode()
+"My name is Ståle".encode(encoding="ascii",errors="backslashreplace")
+"My name is Ståle".encode(encoding="ascii",errors="ignore")
+"My name is Ståle".encode(encoding="ascii",errors="namereplace")
+"My name is Ståle".encode(encoding="ascii",errors="replace")
+"My name is Ståle".encode(encoding="ascii",errors="xmlcharrefreplace")
+'''
+print_fun()
+
+xx='''
+endswith
+returns True if the string ends with the specified value, otherwise False
+string.endswith(value, start, end)
+"Hello, welcome to my world.".endswith(".")
+"Hello, welcome to my world.".endswith("..")
+'''
+print_fun()
+
+xx='''	
+expandtabs
+Sets the tab size of the string
+string.exandtabs(tabsize)
+"H\te\tl\tl\to".expandtabs(2)
+"H\te\tl\tl\to".expandtabs(3)
+"H\te\tl\tl\to".expandtabs(4)
+'''
+print_fun()
+
+xx='''	
+find
+Searches the string for a specified value and returns the position of where it was found
+string.find(value, start, end)
+"Hello, welcome to my world.".find("welcome")
+"Hello, welcome to my world.".find("!!!")
+"Hello, welcome to my world.".find("e")
+'''
+print_fun()
+	
+xx='''	
+format
+Formats specified values in a string
+string.format(value1, value2...)
+"For only {price:.3f} dollars!".format(price = 49)
+"For only {price:.2f} dollars!".format(price = 49)
+"For only {price:.<8} dollars!".format(price = 49)
+"For only {price:<8} dollars!".format(price = 49)
+"For only {price:.>8} dollars!".format(price = 49)
+"For only {price:.^8} dollars!".format(price = 49)
+"For only {price:^8} dollars!".format(price = 49)
+"For only {price:.=8} dollars!".format(price = 49)
+"For only {price:+8} dollars!".format(price = -49)
+"For only {price:+8} dollars!".format(price = 49)
+"For only {price:-8} dollars!".format(price = 49)
+"For only {price:-8} dollars!".format(price = -49)
+"For only {price: 6} dollars!".format(price = 49)
+"For only {price: 6} dollars!".format(price = -49)
+"For only {price:} dollars!".format(price = 49)
+"For only {price:,} dollars!".format(price = 49000000000000)
+"For only {price:_} dollars!".format(price = 49000000000000)
+"For only {price:b} dollars!".format(price = 49)
+"For only {price:d} dollars!".format(price = 49)
+"For only {price:e} dollars!".format(price = 49)
+"For only {price:E} dollars!".format(price = 49)
+"For only {price:f} dollars!".format(price = 49)
+"For only {price:G} dollars!".format(price = 49)
+"For only {price:o} dollars!".format(price = 49)
+"For only {price:x} dollars!".format(price = 49)
+"For only {price:X} dollars!".format(price = 49)
+"For only {price:n} dollars!".format(price = 49)
+"For only {price:%} dollars!".format(price = 49)
+"My name is {fname}, I'am {age}".format( age = 36,fname = "John")
+"My name is {0}, I'am {1}".format("John",36)
+"My name is {}, I'am {}".format("John",36)
+'''
+print_fun()
+
+xx='''	
+index
+Searches the string for a specified value and returns the position of where it was found
+string.index(value, start, end) 
+"Hello, welcome to my world.".index("welcome")
+"Hello, welcome to my world.".index("e")
+"Hello, welcome to my world.".index("e", 5, 10)
+'''
+print_fun()
+
+xx='''
+isalnum
+Returns True if all characters in the string are alphanumeric
+string.isalnum()
+"12345".isalnum()
+"12-345".isalnum()
+"123abcABC".isalnum()
+"Example of characters that are not alphanumeric: (space)!#%&? etc.".isalnum()
+'''
+print_fun()
+
+xx='''	
+isalpha
+Returns True if all characters in the string are in the alphabet
+string.isalpha()
+"abcABC".isalpha()
+"abcABC!".isalpha()
+"123ABC".isalpha()
+"Example of characters that are not alphanumeric: (space)!#%&? etc.".isalpha()
+'''
+
+print_fun()
+xx='''	
+isdecimal
+Returns True if all characters in the string are decimals
+string.isdecimal() 
+"12345".isdecimal()
+"12345.".isdecimal()
+'''
+print_fun()
+
+xx='''	
+isdigit
+Returns True if all characters in the string are digits
+string.isdigit()
+"\u00B2".isdigit()
+"1234".isdigit()
+'''
+print_fun()
+	
+xx='''	
+isidentifier
+Returns True if the string is an identifier
+string.isidentifier()
+"only contains alphanumeric letters (a-z) and (0-9), or underscores (_)".isidentifier()
+"cannot start with a number, or contain any spaces".isidentifier()
+"a123".isidentifier()
+"1abc".isidentifier()
+"_123_".isidentifier()
+"_123abc_".isidentifier()
+'''
+print_fun()
+
+xx='''	
+islower
+Returns True if all characters in the string are lower case
+string.islower()
+"_123abc_".islower()
+"_123abC_".islower()
+'''
+print_fun()
+	
+xx='''	
+isnumeric
+Returns True if all characters in the string are numeric
+string.isnumeric()
+"123abC".isnumeric()
+"123".isnumeric()
+"\u0030".isnumeric()
+'''
+print_fun()
+
+xx='''	
+isprintable
+Returns True if all characters in the string are printable
+string.isprintable()
+"\u0030".isprintable()
+"Hello!Are you 1?".isprintable()
+'''
+print_fun()
+
+xx='''	
+isspace
+Returns True if all characters in the string are whitespaces
+string.isspace()
+"   ".isspace()
+'''
+print_fun()
+	
+xx='''	
+istitle
+Returns True if the string follows the rules of a title
+string.istitle()
+"House Of The Sun".istitle()
+"House of the sun".istitle()
+'''
+print_fun()
+	
+xx='''	
+isupper
+Returns True if all characters in the string are upper case
+string.isupper()
+"House of the sun".isupper()
+"HOUSE OF THE SUN".isupper()
+'''
+print_fun()
+
+xx='''	
+join
+Joins the elements of an iterable to the end of the string
+string.join(iterable)
+"".join("House of the sun")
+"-".join("House of the sun")
+"@".join("home home home Home")
+'''
+print_fun()
+
+xx='''	
+ljust
+Returns a left justified version of the string
+string.ljust(length, character) 
+"banana".ljust(20)
+"banana".ljust(20,"-")
+'''
+print_fun()
+
+xx='''	
+lower
+Converts a string into lower case
+string.lower() 
+"Python".lower()
+"PythoN123".lower()
+'''
+print_fun()
+	
+xx='''
+lstrip
+Returns a left trim version of the string
+string.lstrip(characters)
+"#  .home#homeandmore,.  #  ".lstrip(".,#?!: ")
+'''
+print_fun()
+
+xx='''
+partition
+Returns a tuple where the string is parted into three parts
+string.partition(value)
+"Home in spam tree five".partition("in")
+"Home in spam tree five".partition(" ")
+"Home in spam tree five".partition("f")
+'''
+print_fun()
+	
+xx='''
+replace
+Returns a string where a specified value is replaced with a specified value
+string.replace(oldvalue, newvalue, count)
+"Home home home home".replace("me","le")
+"Home home home home".replace("me","le",3)
+'''
+print_fun()
+
+xx='''
+rfind
+Searches the string for a specified value and returns the last position of where it was found
+string.rfind(value, start, end)
+"Mi casa, su casa.".rfind("casa")
+'''
+print_fun()
+	
+xx='''
+rindex
+Searches the string for a specified value and returns the last position of where it was found
+string.rindex(value, start, end)
+"Home home home home".rindex("me")
+'''
+print_fun()
+
+xx='''
+rjust
+Returns a right justified version of the string
+string.rjust(length, character)
+"Home".rjust(15,"@")
+'''
+print_fun()
+
+xx='''
+rpartition
+Returns a tuple where the string is parted into three parts
+string.rpartition(value)
+"Home in spam tree five".rpartition("in")
+"Home in spam tree five".rpartition(" ")
+"Home in spam tree five".rpartition("f")
+'''
+print_fun()
+	
+xx='''
+rsplit
+Splits the string at the specified separator, and returns a list
+string.rsplit(separator, maxsplit)
+"Home in spam in tree five".rsplit("in",1)
+"Home in spam in tree five".rsplit("in")
+'''
+print_fun()
+
+xx='''
+rstrip
+Returns a right trim version of the string
+string.rstrip(characters)
+"#  .home#homeandmore,.  #  ".rstrip(".,#?!: ")
+'''
+print_fun()
+	
+xx='''
+split
+Splits the string at the specified separator, and returns a list
+string.split(separator, maxsplit)
+"Home in spam in tree five".split("in",1)
+"Home in spam in tree five".split("in")
+'''
+print_fun()
+	
+xx='''
+splitlines
+Splits the string at line breaks and returns a list
+string.splitlines(keeplinebreaks)
+'''
+print_fun()
+	
+xx='''
+startswith
+Returns true if the string starts with the specified value
+string.startswith(value, start, end)
+"Home home home home".startswith("H")
+'''
+print_fun()
+	
+xx='''
+strip
+Returns a trimmed version of the string
+string.strip(characters)
+"#  .home#homeandmore,.  #  ".strip(".,#?!: ")
+'''
+print_fun()
+	
+xx='''
+swapcase
+Swaps cases, lower case becomes upper case and vice versa
+string.swapcase()
+"aBBa".swapcase()
+"123ABCabc".swapcase()
+'''
+print_fun()
+
+xx='''	
+title
+Converts the first character of each word to upper case
+string.title() 
+"python is great!".title()
+'''
+print_fun()
+
+xx='''
+upper
+Converts a string into upper case
+string.upper()
+"Hello my friends".upper()
+'''
+print_fun()
+
+xx='''
+zfill
+Fills the string with a specified number of 0 values at the beginning
+string.zfill(len)
+"hello".zfill(10)
+'''
+print_fun()
