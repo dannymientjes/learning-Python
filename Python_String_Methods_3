@@ -1,18 +1,21 @@
 ####String Methods
 
 def print_fun():
-    yy=(xx.splitlines())                    # splits up the string xx into a list
+    yy=(xx.splitlines())                        # splits up the string xx into a list
     print()
-    print(yy[1]+"()")                       # prints the function name (2nd item of the list)
+    print(yy[1]+"()")                           # prints the function name (2nd item of the list)
     print()
-    print(" "*4+"Description: ",yy[2])      # prints 4 spaces, then the discription (3th item of the list)
-    print(" "*4+"Syntax: ",yy[3])           # prints 4 spaces, the the syntax (4th item of the list)
-    y=(yy[4:])                              # make new list, without first 3 items
-    print()                                 # print empty line
-    for i in y:                             # iter over the new list
-        print(" "*4+"Example:",repr(i))     # prints i the item from the list y, using repr() to print raw
-        print(" "*4+"Output : ",(eval(i)))  # evals the item i , and prints it 
-        print()                             # print empty line
+    print(" "*4+"Description: ",yy[2])          # prints 4 spaces, then the discription (3th item of the list)
+    print(" "*4+"Syntax: ",yy[3])               # prints 4 spaces, the the syntax (4th item of the list)
+    y=(yy[4:])                                  # make new list, without first 3 items
+    print()                                     # print empty line
+    for i in y:                                 # iter over the new list
+        print(" "*4+"Example:",repr(i)[1:-1])   # prints i the item from the list y, using repr() to print raw
+                                                # the [1:-1] is to remove the quotes
+        print(" "*4+"Output : ",(eval(i)))      # evals the item i , and prints it 
+        print()                                 # print empty line
+
+
 xx='''
 capitalize
 Converts the first character to upper case
@@ -355,8 +358,9 @@ xx='''
 split
 Splits the string at the specified separator, and returns a list
 string.split(separator, maxsplit)
-"Home in spam in tree five".split("in",1)
+"Home in spam in tree five".split(" ")
 "Home in spam in tree five".split("in")
+"Home in spam in tree five".split("in",1)
 '''
 print_fun()
 	
